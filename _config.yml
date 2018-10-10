@@ -70,11 +70,7 @@ netease_comment: false
 # Baidu Analytics 
 # ba_track_id: [your track id]
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> c7477eb8fce6f990332b0deffa7c5564aaf1d6c3
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
