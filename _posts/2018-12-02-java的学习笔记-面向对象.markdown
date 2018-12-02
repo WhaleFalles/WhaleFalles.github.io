@@ -1,17 +1,18 @@
-  - ```css
-    layout:     post
-    title:      "java的学习笔记·面向对象"
-    subtitle:   ""
-    date:       2018-12-02 22:11:00
-    author:     "whale"
-    header-img: "img/post-bg-re-vs-ng2.jpg"
-    header-mask: 0.3
-    catalog:    true
-    tags:
-    
-    - java
-    ```
+---
 
+layout:     post
+title:      "java的学习笔记·面向对象"
+subtitle:   ""
+date:       2018-12-02 22:11:00
+author:     "whale"
+header-img: "img/post-bg-re-vs-ng2.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+
+- java
+
+---
 
 
 
@@ -33,7 +34,7 @@ ps：局部变量可以与函数的局部变量名相同，因为一个在堆内
 
 
 
-### 匿名对象
+# 匿名对象
 
 ##### 概念
 
@@ -51,7 +52,7 @@ new car().run(); 为**匿名对象**的函数调用
 
 
 
-## 封装
+# 封装
 
 ##### 概念
 
