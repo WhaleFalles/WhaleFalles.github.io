@@ -5,12 +5,7 @@ layout: default
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-<head>
 
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-
-</head>
 <!-- Post Header -->
 {% include intro-header.html type='post' %}
 
@@ -112,18 +107,22 @@ layout: default
 
 
 <!-- 来必力City版安装代码 -->
-    <div id="vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: 'vlnq1OTM4j8K3PU42j6gFQYb-gzGzoHsz',
-            appKey: 'fPlzUMu27jDwRp45MQJ7ydVM'
-            notify:false, 
-            verify:false, 
-            avatar:'mm', 
-            placeholder: '快点评论啦：）'
-        })
-    </script>
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTQ4MC8xODAyNw==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
 <!-- City版安装代码已完成 -->
 
 
