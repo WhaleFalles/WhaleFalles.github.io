@@ -4,7 +4,7 @@ title:      "新怪谭运动-《湮灭》影评"
 subtitle:   ""
 date:       2018-12-09 22:11:00
 author:     "whale"
-header-img: "/_posts/2018-12-9/head.jpg"
+header-img: "https://s1.ax1x.com/2018/12/09/FGnyLT.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
