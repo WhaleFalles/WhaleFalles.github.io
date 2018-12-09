@@ -5,7 +5,7 @@ title:      "java的学习笔记·面向对象"
 subtitle:   ""
 date:       2018-12-02 22:11:00
 author:     "whale"
-header-img: "img/post-bg-re-vs-ng2.jpg"
+header-img: "img/photo-java.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
@@ -70,9 +70,118 @@ new car().run(); 为**匿名对象**的函数调用
 
 表示当前对象的引用，用来区分重名的局部变量和成员变量
 
-# 下一步
+## static 关键字
 
+- 被static修饰的成员一般储存在类的代码中（储存在类的静态区域），而类是被所有的对象所共享的 ，所以static成员也被所有对象共享
+- 推荐通过类名调用，（也可以用对象来调用）
+- 类优先于对象而存在，所以静态成员不能访问非静态成员（因为非静态成员依靠对象存在而存在，已存在的东西不能访问未知的东西），所以静态成员只能相互访问
 
+#### 成员变量与静态成员的区别
 
+1. 所属不同：
 
+   静态成员属于类，成员变量属于对象
+
+2. 内存位置不同：
+
+   静态变量储存在方法区的静态区，成员变量储存在堆内存中
+
+3. 生命周期不同
+
+   静态变量随着类的加载而加载，消失而消失
+
+   成员变量随着对象的创建而存在，销毁而销毁
+
+4. 调用不同
+
+   静态变量用 类名.静态变量 来调用
+
+   成员变量用 对象名.成员变量 来调用
+
+## java的文档注释
+
+java有三种注释方式，第三种是文档注释，语法如下
+
+```java
+/**
+
+*类或者方法的描述
+
+@version v1.9版本
+
+@author  作者
+
+@return 返回值的描述
+
+@param 参数 参数的描述
+
+....
+
+*/
+```
+
+用javadoc工具来生成html说明文档，命令行如下
+
+`javadoc -d path file.java`
+
+样例如下
+
+```java
+/**
+  这是测试注释文档的demo
+  @author me
+  @version v1.0
+ */
+public class demo
+{
+	/**
+	 * 这是私有的构造函数，不会在注释文档中出现
+	  @return null
+	 */
+	private demo(){}
+	/**
+	 * 用来测试的第一个函数
+	 * @param  i 一个整型数据
+	 * @return  i本身
+	 */
+	public static int test1(int i)
+	{
+		return i;
+	}
+	/**
+	 * 用来测试的第二个文档
+	 * @param  j 一个整型数据
+	 * @return   返回j的平方
+	 */
+	public static int test2(int j)
+	{
+		return j*j;
+	}
+}
+```
+
+cmd输出如下
+
+```bash
+C:\Users\Administrator\Desktop\tset>javadoc -d api -version -author demo.java
+正在加载源文件demo.java...
+正在构造 Javadoc 信息...
+正在创建目标目录: "api\"
+标准 Doclet 版本 1.8.0_191
+正在构建所有程序包和类的树...
+正在生成api\demo.html...
+正在生成api\package-frame.html...
+正在生成api\package-summary.html...
+正在生成api\package-tree.html...
+正在生成api\constant-values.html...
+正在构建所有程序包和类的索引...
+正在生成api\overview-tree.html...
+正在生成api\index-all.html...
+正在生成api\deprecated-list.html...
+正在构建所有类的索引...
+正在生成api\allclasses-frame.html...
+正在生成api\allclasses-noframe.html...
+正在生成api\index.html...
+正在生成api\help-doc.html...
+```
 
